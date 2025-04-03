@@ -7,3 +7,7 @@ let directionEl = document.getElementById("direction");
 document.addEventListener("keydown", function(e){
     directionEl.innerText = `The Key you pressed is ${e.code}`;
 });
+
+document.getElementById("clickMe").addEventListener("click", function () {
+    this.innerText = "You clicked me!";
+});
