@@ -11,3 +11,18 @@ document.addEventListener("keydown", function(e){
 document.getElementById("clickMe").addEventListener("click", function () {
     this.innerText = "You clicked me!";
 });
+
+function getRandomColor() {
+    let letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+function changeBackgroundColor() {
+    document.body.style.backgroundColor = getRandomColor();
+}
+
+document.getElementById("randomColorBtn").addEventListener("click", changeBackgroundColor);
