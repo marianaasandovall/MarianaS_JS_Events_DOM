@@ -26,3 +26,19 @@ function changeBackgroundColor() {
 }
 
 document.getElementById("randomColorBtn").addEventListener("click", changeBackgroundColor);
+
+
+let button = document.querySelector("#darkMode");
+let isDarkMode = false;
+
+button.addEventListener("click", () => {
+    if (isDarkMode) {
+        document.body.classList.remove("dark");
+        button.textContent = "Dark Mode";
+        isDarkMode = false;
+    } else {
+        document.body.classList.add("dark");
+        button.textContent = "Light Mode";
+        isDarkMode = true;
+    }
+});
